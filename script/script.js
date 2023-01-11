@@ -69,8 +69,6 @@ function validation() {
   const numValue = numInputEl.value.trim();
   const cvvValue = cvvInputEl.value.trim();
 
-  // let cardNumberSections = numValue.match(/\d{1,4}/g);
-
   // holder name
   if (nameValue === "") {
     setError(nameInputEl, `Can't be blank`);

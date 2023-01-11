@@ -316,9 +316,11 @@ p {
 /* *********** */
 
 .social-icon {
-  margin: 3rem auto;
+  margin-top: 2rem;
   display: flex;
   column-gap: 25px;
+  display: flex;
+  justify-content: center;
 }
 
 .icons {
@@ -330,7 +332,7 @@ p {
   justify-content: center;
   font-size: 26px;
   border-radius: 50%;
-  outline: 2px solid #fff;
+  outline: 2px solid #600594;
   transition-property: outline-offset, outline-color, background-color;
   transition-duration: 0.25s;
 }
