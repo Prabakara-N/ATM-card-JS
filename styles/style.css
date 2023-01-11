@@ -224,7 +224,7 @@ select:focus {
 
 .cvv-input {
   width: 170px;
-  padding: 0.75rem 0 0.75rem 0.8rem;
+  padding: 0.65rem 0 0.75rem 0.8rem;
 }
 
 form input {
@@ -288,7 +288,8 @@ form input:focus {
   background-color: aliceblue;
   padding: 1.5rem;
   border-radius: 10px;
-  margin: 2rem auto;
+  margin: 0 auto 2rem auto;
+  box-shadow: var(--box-shadow);
 }
 
 .completed-img {
