@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Custom Favicon -->
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+
+    <title>Interactive-card-Component</title>
+
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--normalize CSS -->
+    <link rel="stylesheet" href="./styles/normalize.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- front card -->
+      <div class="card-container">
+        <div class="front" id="front">
+          <div class="image">
+            <img
+              src="./images/icons8-chip-card-48.png"
+              alt="chip"
+              class="chip-logo"
+            />
+            <img
+              src="./images/icons8-visa-144.png"
+              alt="visa"
+              class="visa-logo"
+            />
+          </div>
+          <h2 class="card-number-box">0000 0000 0000 0000</h2>
+          <div class="flexbox">
+            <div class="name-container">
+              <p class="holder">Holder Name</p>
+              <p class="card-holder-name">Cristiano Ronaldo</p>
+            </div>
+
+            <div class="front-box">
+              <p class="exp">Expires</p>
+              <div class="expiration">
+                <span class="exp-month">MM /</span>
+                <span class="exp-year">YY</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- card back -->
+        <div class="back" id="back">
+          <img
+            src="./images/icons8-visa-144.png"
+            alt="visa"
+            class="visa-logo"
+          />
+          <div class="stripe"></div>
+          <div class="back-box">
+            <span class="back-cvv">cvv</span>
+            <div class="cvv-box"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- form -->
+      <form id="form">
+        <!-- card number -->
+        <div class="inputBox-num">
+          <label for="card-number">Card Number</label>
+          <br />
+          <input
+            type="tel"
+            maxlength="16"
+            class="card-number-input"
+            id="card-number"
+            placeholder="e.g 0000 0000 0000 0000"
+          />
+          <p class="error-msg">can't be blank</p>
+        </div>
+
+        <!-- name -->
+        <div class="inputBox-name">
+          <label for="holder-name">Card Holder Name</label>
+          <br />
+          <input
+            type="text"
+            maxlength="16"
+            class="card-holder-input"
+            id="holder-name"
+            placeholder="Cristiano Ronaldo"
+          />
+          <p class="error-msg">can't be blank</p>
+        </div>
+        <div class="cvv-container">
+          <!-- month -->
+          <div class="inputBox">
+            <label for="month-input" class="mm">Expiration MM</label>
+            <select name="" id="month-input" class="month-input">
+              <option value="month" selected disabled>month</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="19">19</option>
+              <option value="19">19</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+            </select>
+            <p class="error-msg">can't be blank</p>
+          </div>
+
+          <!-- year -->
+          <div class="inputBox">
+            <label for="year-input" class="yy">Expiration YY</label>
+            <select name="" id="year-input" class="year-input">
+              <option value="year" selected disabled>year</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+              <option value="2027">2027</option>
+              <option value="2028">2028</option>
+              <option value="2029">2029</option>
+              <option value="2030">2030</option>
+              <option value="2031">2031</option>
+              <option value="2032">2032</option>
+              <option value="2033">2033</option>
+              <option value="2034">2034</option>
+              <option value="2035">2035</option>
+              <option value="2036">2036</option>
+              <option value="2037">2037</option>
+              <option value="2038">2038</option>
+              <option value="2039">2039</option>
+              <option value="2040">2040</option>
+            </select>
+            <p class="error-msg msg">can't be blank</p>
+          </div>
+
+          <!-- cvv -->
+          <div class="inputBox">
+            <label for="cvv-input" class="cvv">CVV</label>
+            <input
+              type="tel"
+              maxlength="3"
+              class="cvv-input"
+              id="cvv-input"
+              placeholder="e.g 123"
+            />
+            <p class="error-msg">can't be blank</p>
+          </div>
+        </div>
+        <button type="submit" class="submit-btn">SUBMIT</button>
+      </form>
+    </div>
+
+    <!-- completed state -->
+    <div class="completed-container" id="completed-container">
+      <div class="completed-img">
+        <img src="./images/icon-complete.svg" alt="comp" class="c-img" />
+      </div>
+      <h2 class="thanks">THANK YOU !</h2>
+      <p class="c-para">We've added your card details</p>
+      <button id="btn-complete">Continue</button>
+    </div>
+
+    <!-- social icons -->
+    <div class="social-icon">
+      <a href="https://www.instagram.com/swag__55__/"
+        ><i class="fa-brands fa-instagram icons"></i
+      ></a>
+      <a href="https://www.linkedin.com/in/prabakaran-m-105289219/"
+        ><i class="fa-brands fa-linkedin icons"></i
+      ></a>
+      <a href="https://github.com/Prabakara-N"
+        ><i class="fa-brands fa-github icons"></i
+      ></a>
+    </div>
+    <!-- Custom JavaScript -->
+    <script src="./script/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,485 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+
+* {
+  padding: 0;
+  margin-top: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+:root {
+  --clr-Linear-gradient-active-input-border: #6448fe to #600594;
+  --clr-Red-input-errors: #ff5252;
+  --clr-White: #ffffff;
+  --clr-Light-grayish-violet: #dedddf;
+  --clr-Dark-grayish-violet: #8e8593;
+  --clr-Very-dark-violet: #21092f;
+  --box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25),
+    -2px -2px 2px rgba(0, 0, 0, 0.25);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: #1c2040;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* container */
+.container {
+  margin: 3rem auto;
+}
+
+/* card container */
+.card-container {
+  position: relative;
+  width: 365px;
+  height: 220px;
+  margin: auto;
+}
+
+/* front card */
+.front {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 1.25rem 1.5rem;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    67.2deg,
+    rgba(37, 208, 199, 1) -7.5%,
+    rgba(165, 90, 240, 1) 62.7%
+  );
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  backface-visibility: hidden;
+  transform: perspective(1000px) rotateY(0deg);
+  transition: transform 0.4s ease-out;
+}
+.chip-logo {
+  width: 60px;
+}
+
+.visa-logo {
+  width: 80px;
+  height: 60px;
+}
+
+.image {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
+
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.holder {
+  display: inline;
+}
+
+.exp,
+.holder {
+  font-weight: bold;
+  color: #600594;
+  display: inline;
+}
+
+.expiration {
+  margin-top: 3px;
+  color: white;
+  font-size: 0.8rem;
+}
+
+.card-holder-name {
+  margin-top: 2px;
+  color: white;
+  font-size: 1.15rem;
+}
+
+.card-number-box {
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* back card */
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+    67.2deg,
+    rgba(37, 208, 199, 1) -7.5%,
+    rgba(165, 90, 240, 1) 62.7%
+  );
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  padding: 1.25rem 1.5rem;
+  text-align: right;
+  backface-visibility: hidden;
+  transform: perspective(1000px) rotateY(180deg);
+  transition: transform 0.4s ease-out;
+}
+
+.back .stripe {
+  background: #000;
+  width: 100%;
+  margin: 10px 0;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.back-box {
+  position: relative;
+}
+
+.back-cvv {
+  position: absolute;
+  color: white;
+  font-size: 1.5rem;
+  right: 1rem;
+  bottom: 1.4rem;
+}
+
+/* form */
+form {
+  width: 550px;
+  background-color: aliceblue;
+  padding: 6rem 1rem 1rem 1rem;
+  margin-top: -4.5rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  font-size: 1.1rem;
+  margin-bottom: 3px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  color: #444;
+  cursor: pointer;
+}
+
+select:focus {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.cvv-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-holder-input,
+.card-number-input {
+  width: 100%;
+}
+
+.card-holder-input {
+  text-transform: capitalize;
+}
+
+form input {
+  border: 2px solid transparent;
+  outline: none;
+  padding: 0.6rem 0 0.6rem 10px;
+  border-radius: 5px;
+  margin-top: 3px;
+  cursor: pointer;
+}
+
+form input:focus {
+  border: 2px solid rgba(165, 90, 240, 1);
+}
+
+/* button */
+
+.submit-btn {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 0.7rem 0;
+  background-image: linear-gradient(
+    67.2deg,
+    rgba(37, 208, 199, 1) -7.5%,
+    rgba(165, 90, 240, 1) 62.7%
+  );
+  background-color: #2e0446;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+}
+
+.submit-btn:hover {
+  transition: all 0.3s;
+  background-image: linear-gradient(
+    67.2deg,
+    rgb(9, 239, 228) -7.5%,
+    rgb(151, 63, 239) 62.7%
+  );
+}
+
+/* error msg */
+.error-msg {
+  visibility: hidden;
+  font-size: 0.8rem;
+  color: orangered;
+  padding-top: 5px;
+  text-align: left;
+  padding-left: 5px;
+}
+
+/* completed container */
+.completed-container {
+  display: none;
+  width: 340px;
+  background-color: aliceblue;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin: 2rem auto;
+}
+
+.completed-img {
+  text-align: center;
+}
+
+.completed-container > h2,
+p {
+  text-align: center;
+}
+
+.c-img {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 1.5rem;
+}
+
+#btn-complete {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 0.7rem 0;
+  color: white;
+  background-color: var(--clr-Very-dark-violet);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#btn-complete:hover {
+  background-color: #2e0446;
+  transition: all 0.3s;
+}
+
+/* *********** */
+/* icons start */
+/* *********** */
+
+.social-icon {
+  margin: 3rem auto;
+  display: flex;
+  column-gap: 25px;
+}
+
+.icons {
+  width: 40px;
+  height: 40px;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  border-radius: 50%;
+  outline: 2px solid #fff;
+  transition-property: outline-offset, outline-color, background-color;
+  transition-duration: 0.25s;
+}
+
+.icons:hover {
+  outline-offset: 4px;
+}
+
+.icons:hover {
+  animation: shake 0.3s;
+}
+
+/* instagram */
+.fa-instagram {
+  color: #d62976;
+}
+
+.fa-instagram:hover {
+  background-image: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf407 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  outline-color: #a02d76;
+  color: white;
+}
+
+/* linkedin */
+.fa-linkedin {
+  font-size: 24px;
+  color: #0a66c2;
+  background-color: transparent;
+}
+
+.fa-linkedin:hover {
+  background-color: #0a66c2;
+  outline-color: #0077b5;
+  color: white;
+}
+
+/* github */
+.fa-github {
+  color: #6e5494;
+}
+
+.fa-github:hover {
+  color: white;
+  outline-color: #6e5494;
+  background-color: #282727;
+}
+
+@keyframes shake {
+  10% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(-15deg);
+  }
+  30% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(-15deg);
+  }
+}
+
+/* *********** */
+/* icons end */
+/* *********** */
+
+/* media quoery */
+@media screen and (max-width: 585px) {
+  .container {
+    width: 95%;
+    margin: 2rem auto;
+  }
+
+  .card-container {
+    width: 350px;
+  }
+
+  .card-number-box {
+    font-size: 1.15rem;
+  }
+
+  .flexbox {
+    margin-top: 0.5rem;
+  }
+
+  .card-holder-name {
+    font-size: 1rem;
+  }
+
+  form {
+    width: 95%;
+    margin: -4.25rem auto 0 auto;
+  }
+
+  .mm,
+  .yy,
+  .cvv {
+    font-size: 0.9rem;
+  }
+
+  .msg {
+    font-size: 0.76rem;
+  }
+
+  .cvv {
+    margin-top: 10%;
+  }
+
+  .cvv-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .year-input {
+    width: 90px;
+  }
+
+  .month-input {
+    width: 95px;
+  }
+
+  .cvv-input {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card-container {
+    width: 300px;
+    height: 40vh;
+  }
+
+  .cvv-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .msg {
+    font-size: 0.76rem;
+  }
+}
