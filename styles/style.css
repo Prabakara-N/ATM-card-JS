@@ -200,6 +200,7 @@ select:focus {
 .cvv-container {
   display: flex;
   justify-content: space-between;
+  gap: 1rem;
 }
 
 .inputBox {
@@ -214,6 +215,16 @@ select:focus {
 
 .card-holder-input {
   text-transform: capitalize;
+}
+
+.year-input,
+.month-input {
+  width: 150px;
+}
+
+.cvv-input {
+  width: 170px;
+  padding: 0.75rem 0 0.75rem 0.8rem;
 }
 
 form input {
@@ -444,10 +455,6 @@ p {
     font-size: 0.76rem;
   }
 
-  .cvv {
-    margin-top: 10%;
-  }
-
   .cvv-container {
     display: flex;
     align-items: center;
@@ -466,12 +473,24 @@ p {
   .cvv-input {
     width: 100%;
   }
+
+  .cvv {
+    margin-top: 14px;
+  }
+
+  .msg {
+    font-size: 0.73rem;
+  }
 }
 
 @media screen and (max-width: 400px) {
   .card-container {
     width: 300px;
-    height: 40vh;
+    height: 200px;
+  }
+
+  .card-number-box {
+    margin-top: -0.5rem;
   }
 
   .cvv-container {
